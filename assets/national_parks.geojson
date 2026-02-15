@@ -1,0 +1,124 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Yellowstone",
+        "visitors": 4860000,
+        "acres": 2219791,
+        "region": "West",
+        "description": "First national park in the world."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.5885,
+          44.428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Yosemite",
+        "visitors": 3667000,
+        "acres": 761747,
+        "region": "West",
+        "description": "Famed for giant sequoias and cliffs."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5383,
+          37.8651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Grand Canyon",
+        "visitors": 4732000,
+        "acres": 1217403,
+        "region": "Southwest",
+        "description": "Immense canyon carved by the Colorado River."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.1129,
+          36.1069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Great Smoky Mountains",
+        "visitors": 12937000,
+        "acres": 522419,
+        "region": "Southeast",
+        "description": "Ridge upon ridge of forest."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.507,
+          35.6131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Acadia",
+        "visitors": 3970000,
+        "acres": 49075,
+        "region": "Northeast",
+        "description": "Atlantic coast recreation area."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.2733,
+          44.3386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Zion",
+        "visitors": 4690000,
+        "acres": 147237,
+        "region": "Southwest",
+        "description": "Steep red cliffs and forest trails."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.0263,
+          37.2982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rocky Mountain",
+        "visitors": 4300000,
+        "acres": 265600,
+        "region": "West",
+        "description": "Spectacular mountain environments."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.6836,
+          40.3428
+        ]
+      }
+    }
+  ]
+}

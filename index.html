@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Parks Dashboard</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div id="dashboard">
+        <div class="header">
+            <h2>National Parks Analytics</h2>
+            <p>2023 Visitor Statistics</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Annual Visitors</h3>
+            <div id="total-visitors" class="big-number">Loading...</div>
+        </div>
+
+        <div class="card">
+            <h3>Distribution by Region</h3>
+            <div id="region-chart"></div>
+        </div>
+
+        <div class="card">
+            <h3>Park Size (Acres)</h3>
+            <div id="acres-chart"></div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Source:</strong> National Park Service (Mock Data)</p>
+            <p><em>Created for GEOG 458 Lab 6</em></p>
+        </div>
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
