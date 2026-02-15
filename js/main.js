@@ -18,6 +18,7 @@ async function geojsonFetch() {
         return;
     }
 
+    // 1. Load data logic
     map.on('load', () => {
         map.addSource('parks', {
             type: 'geojson',
@@ -37,31 +38,32 @@ async function geojsonFetch() {
             }
         });
 
-        updateDashboard(data);
+        // 2. Initialize Dashboard immediately with full data
+        updateDashboard(data.features);
 
+        // 3. Update Dashboard on Zoom/Move
         map.on('moveend', () => {
             const features = map.queryRenderedFeatures({ layers: ['park-circles'] });
             if (features) {
-                updateDashboard({ features: features });
+                updateDashboard(features);
             }
         });
-
-        map.on('click', 'park-circles', (e) => {
-            const props = e.features[0].properties;
-            const coordinates = e.features[0].geometry.coordinates.slice();
-            new mapboxgl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(`<strong>${props.title}</strong><br>Region: ${props.region}<br>Visitors: ${props.visitors.toLocaleString()}`)
-                .addTo(map);
-        });
-
-        map.on('mouseenter', 'park-circles', () => map.getCanvas().style.cursor = 'pointer');
-        map.on('mouseleave', 'park-circles', () => map.getCanvas().style.cursor = '');
     });
+
+    // 4. Interactions
+    map.on('click', 'park-circles', (e) => {
+        const props = e.features[0].properties;
+        new mapboxgl.Popup()
+            .setLngLat(e.features[0].geometry.coordinates)
+            .setHTML(`<strong>${props.title}</strong><br>Region: ${props.region}<br>Visitors: ${props.visitors.toLocaleString()}`)
+            .addTo(map);
+    });
+
+    map.on('mouseenter', 'park-circles', () => map.getCanvas().style.cursor = 'pointer');
+    map.on('mouseleave', 'park-circles', () => map.getCanvas().style.cursor = '');
 }
 
-function updateDashboard(data) {
-    const features = data.features;
+function updateDashboard(features) {
     const totalVisitors = features.reduce((sum, f) => sum + f.properties.visitors, 0);
     document.getElementById('total-visitors').innerText = totalVisitors.toLocaleString();
 
