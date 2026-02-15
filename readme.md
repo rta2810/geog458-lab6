@@ -24,4 +24,4 @@ In addition to the map, the dashboard includes:
 * D3.js (Data manipulation)
 
 ## 5. Deployment
-* **GitHub Repository:** [INSERT_YOUR_GITHUB_URL_HERE]
+* **GitHub Repository:** [(https://rta2810.github.io/geog458-lab6/)]
